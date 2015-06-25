@@ -19,5 +19,9 @@ sbt test
 ###build and run with spark 1.4
 ```
 sbt assembly
-$YOUR_SPARK_HOME/bin/spark-submit   --class "pl.abicz.sparkmulticount.Main"  --master local[4]   target/scala-2.10/multicounter.jar `pwd`/data/ result.csv src/test/resources/GeoLiteCity.dat
+$YOUR_SPARK_HOME/bin/spark-submit \
+--class "pl.abicz.sparkmulticount.Main" \
+--master local[4] \
+target/scala-2.10/multicounter.jar \ 
+`pwd`/data/ result.csv src/test/resources/GeoLiteCity.dat
 ```

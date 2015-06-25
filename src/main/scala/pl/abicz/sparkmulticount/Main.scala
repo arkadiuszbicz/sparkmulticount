@@ -5,7 +5,7 @@ import org.apache.spark.SparkConf
 
 object Main {
   def main(args: Array[String]) {
-    println(args.mkString)
+    println(args.mkString(","))
     val filesDirIn = args(0)
     val fileOut = args(1)
     val geoFile = args(2)
